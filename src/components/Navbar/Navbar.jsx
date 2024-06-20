@@ -20,16 +20,24 @@ const navigate = useNavigate()
     <div className='navbar'>
       {/* <img src={assets.logo} alt="" className="logo" /> */}
       <Link to='/'>
-        <h1 className='head'>Feasto.</h1>
+        <h1 className='head'>Foody.</h1>
       </Link>
       <ul className="navbar-menu">
         <Link to='/' onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>home</Link>
-        <a href='#explore-menu' onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>menu</a>
-        <a href='#app-download' onClick={() => setMenu("mobile-app")} className={menu === "mobile-app" ? "active" : ""}>mobile app</a>
-        <a href='#footer' onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>contact us</a>
+        <a href='#explore-menu' onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>Menu</a>
+        <a href='https://shobhitrastogi-portfolio.netlify.app' >Portfolio</a>
+        <a href='#footer' onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>Contact us</a>
+        <a target='blank' href="https://blog-rastogi.netlify.app">
+                        <li>Blog</li>
+                        </a>
+                         <a target='blank' href="https://youtuve.netlify.app">
+                        <li>Youtube</li>
+                        </a>
+                        <a target='blank' href="https://inotebook-rastogi.netlify.app">
+                        <li>iNotebook</li>
+                        </a>
       </ul>
       <div className="navbar-right">
-        <img src={assets.search_icon} alt="" />
         <div className="navbar-search-icon">
           <Link to='/cart'>
             <img src={assets.basket_icon} alt="" />
