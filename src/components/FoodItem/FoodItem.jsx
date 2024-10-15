@@ -6,7 +6,10 @@ import { StoreContext } from '../../context/StoreContext'
 const FoodItem = ({ id, name, price, description, image }) => {
 
     const { cartItems, addToCart, removeFromCart, url } = useContext(StoreContext)
-
+    if (!cartItems) {
+        console.error("StoreContext is missing 'cartItems':", { cartItems, url, addToCart, removeFromCart });
+        return null;
+    }
     return (
         <div className='food-item'>
             <div className="food-item-img-container">
